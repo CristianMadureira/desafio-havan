@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/my_home">
+
+    <fragment
+        android:id="@+id/my_home"
+        android:name="com.example.desafiohavan.presentation.shopping.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/home_fragment"/>
+    <fragment
+        android:id="@+id/my_favorites"
+        android:name="com.example.desafiohavan.presentation.shopping.FavoritesFragment"
+        android:label="FavoritesFragment"
+        tools:layout="@layout/favorite_fragment"/>
+
+    <dialog
+        android:id="@+id/filter_bottom_sheet"
+        android:name="com.example.desafiohavan.presentation.shopping.FilterBottomSheetFragment"
+        tools:layout="@layout/filter_bottom_sheet_dialog_fragment">
+        <action
+            android:id="@+id/action_nav_graph_to_my_home"
+            app:destination="@id/my_home" />
+    </dialog>
+<!--    <fragment-->
+<!--        android:id="@+id/my_cart"-->
+<!--        android:name="com.example.desafiohavan.presentation.shopping.ShoppingCartFragment"-->
+<!--        android:label="ShoppingCartFragment"-->
+<!--        tools:layout="@layout/shoppring_cart_fragment"/>-->
+</navigation>
